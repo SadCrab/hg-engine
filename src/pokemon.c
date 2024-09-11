@@ -2203,3 +2203,58 @@ u32 MonTryLearnMoveOnLevelUp(struct PartyPokemon *mon, int * last_i, u16 * sp0)
     sys_FreeMemoryEz(levelUpLearnset);
     return ret;
 }
+
+
+/**
+ *  @brief Recalculate stats once a Pokemon has been deified (mechanic to be implemented)
+ *
+ *  @param party Party to run through to recalculate stats
+ */
+// void RecalcPartyPokemonStatsGodlyGift(struct Party *party)
+// {
+//     for (int i = 0; i < party->count; i++)
+//     {
+//         struct PartyPokemon *receiver = Party_GetMonByIndex(party, i);
+//         // The god is just the last party pokemon for now.
+//         struct PartyPokemon *god      = Party_GetMonByIndex(party, party->count);
+
+//         switch (i)
+//         {
+//             case 0:
+//                 if (receiver->party.hp > god->party.maxHp) {
+//                     receiver->party.hp       = (u16) GetMonData(god, MON_DATA_MAXHP, NULL);
+//                     receiver->party.maxHp    = (u16) GetMonData(god, MON_DATA_MAXHP, NULL);
+//                     // SetMonData(receiver, MON_DATA_HP, &god->party.maxHp);
+//                     // SetMonData(receiver, MON_DATA_MAXHP, &god->party.maxHp);
+//                     RecalcPartyPokemonStats(receiver);
+//                 } else {
+//                     receiver->party.maxHp    = (u16) GetMonData(god, MON_DATA_MAXHP, NULL);
+//                     // SetMonData(receiver, MON_DATA_MAXHP, &god->party.maxHp);
+//                     RecalcPartyPokemonStats(receiver);
+//                 }
+//                 break;
+//             case 1:
+//                 SetMonData(receiver, MON_DATA_ATTACK, &god->party.atk);
+//                 RecalcPartyPokemonStats(receiver);
+//                 break;
+//             case 2:
+//                 SetMonData(receiver, MON_DATA_DEFENSE, &god->party.def);
+//                 RecalcPartyPokemonStats(receiver);
+//                 break;
+//             case 3:
+//                 SetMonData(receiver, MON_DATA_SPECIAL_ATTACK, &god->party.spatk);
+//                 RecalcPartyPokemonStats(receiver);
+//                 break;
+//             case 4:
+//                 SetMonData(receiver, MON_DATA_SPECIAL_DEFENSE, &god->party.spdef);
+//                 RecalcPartyPokemonStats(receiver);
+//                 break;
+//             case 5:
+//                 SetMonData(receiver, MON_DATA_SPEED, &god->party.speed);
+//                 RecalcPartyPokemonStats(receiver);
+//                 break;
+//             default:
+//                 break;
+//         }
+//     }
+// }

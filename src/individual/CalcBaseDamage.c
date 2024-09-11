@@ -434,6 +434,21 @@ int CalcBaseDamage(void *bw, struct BattleStruct *sp, int moveno, u32 side_cond,
         movepower = movepower * (100 + AttackingMon.item_power) / 100;
     }
 
+    // handle imbalanced scales
+    if ((AttackingMon.item_held_effect == HOLD_EFFECT_IMBALANCED_SCALES))
+    {
+        if ((movetype == AttackingMon.type1) || (movetype == AttackingMon.type2))
+        {
+            movepower = movepower * 1 / 100;
+            //movepower = movepower * (100 - 15) / 100;
+        }
+        if ((movetype != AttackingMon.type1) && (movetype != AttackingMon.type2))
+        {
+            movepower = movepower * 999 / 100;
+            //movepower = movepower * (100 + 35) / 100;
+        }
+    }
+
     // handle thick fat
     if ((MoldBreakerAbilityCheck(sp, attacker, defender, ABILITY_THICK_FAT) == TRUE) &&
         ((movetype == TYPE_FIRE) || (movetype == TYPE_ICE)))

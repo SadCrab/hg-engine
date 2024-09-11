@@ -29327,3 +29327,50 @@ levelup SPECIES_URSALUNA_BLOODMOON
     learnset MOVE_HAMMER_ARM, 64
     learnset MOVE_BLOOD_MOON, 70
     terminatelearnset
+
+levelup SPECIES_CARIBOLT
+    learnset MOVE_TACKLE, 1
+    learnset MOVE_LEAFAGE, 1
+    learnset MOVE_LEER, 1
+    learnset MOVE_THUNDER_SHOCK, 1
+    learnset MOVE_LEER, 4
+    learnset MOVE_THUNDER_SHOCK, 7
+    learnset MOVE_QUICK_ATTACK, 12
+    learnset MOVE_RAZOR_LEAF, 15
+    learnset MOVE_CONFUSE_RAY, 19
+    learnset MOVE_SPARK, 24
+    learnset MOVE_LEECH_SEED, 28
+    learnset MOVE_BODY_SLAM, 32
+    learnset MOVE_SEED_BOMB, 37
+    learnset MOVE_WILD_CHARGE, 42
+    learnset MOVE_SYNTHESIS, 47
+    learnset MOVE_CHARGE_BEAM, 52
+    learnset MOVE_ZAP_CANNON, 57
+    learnset MOVE_MAGNET_RISE, 62
+    terminatelearnset
+
+levelup SPECIES_STRATAGEM
+    learnset MOVE_PALEO_WAVE, 1
+    learnset MOVE_QUICK_GUARD, 1
+    learnset MOVE_LASER_FOCUS, 1
+    learnset MOVE_WEATHER_BALL, 1
+    //learnset MOVE_TACKLE, 1
+    //learnset MOVE_DEFENSE_CURL, 1
+    //learnset MOVE_ROLLOUT, 1
+    //learnset MOVE_MUD_SLAP, 1
+    learnset MOVE_ROCK_BLAST, 13
+    learnset MOVE_DISABLE, 17
+    learnset MOVE_ACCELEROCK, 21
+    learnset MOVE_ACUPRESSURE, 26
+    learnset MOVE_PALEO_WAVE, 28
+    learnset MOVE_ANCIENT_POWER, 30
+    learnset MOVE_MUD_SHOT, 34
+    learnset MOVE_POWER_GEM, 39
+    learnset MOVE_DOUBLE_EDGE, 43
+    learnset MOVE_EARTH_POWER, 47
+    learnset MOVE_METAL_SOUND, 52
+    learnset MOVE_SPEED_SWAP, 56
+    learnset MOVE_VACUUM_WAVE, 60
+    learnset MOVE_LOCK_ON, 65
+    learnset MOVE_HEAD_SMASH, 69
+    terminatelearnset

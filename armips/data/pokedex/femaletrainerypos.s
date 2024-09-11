@@ -1083,5 +1083,7 @@
 /* SPECIES_IRON_CROWN      */ .halfword 8
 /* SPECIES_TERAPAGOS       */ .halfword 8
 /* SPECIES_PECHARUNT       */ .halfword 8
+/* SPECIES_CARIBOLT        */ .halfword 8
+/* SPECIES_STRATAGEM       */ .halfword 8
 
 .close

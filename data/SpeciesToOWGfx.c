@@ -1082,4 +1082,6 @@ const u16 UNUSED sSpeciesToOWGfx[] =
     [SPECIES_IRON_CROWN         ] = 1306,
     [SPECIES_TERAPAGOS          ] = 1307,
     [SPECIES_PECHARUNT          ] = 1308,
+    [SPECIES_CARIBOLT           ] = 1309,
+    [SPECIES_STRATAGEM          ] = 1310,
 };

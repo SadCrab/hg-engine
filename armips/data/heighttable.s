@@ -1091,6 +1091,9 @@ heightentry SPECIES_IRON_CROWN, 0, 0, 0, 0
 heightentry SPECIES_TERAPAGOS, 0, 0, 0, 0
 heightentry SPECIES_PECHARUNT, 0, 0, 0, 0
 
+heightentry SPECIES_CARIBOLT, 5, 5, 2, 2
+heightentry SPECIES_STRATAGEM, 0, 0, 0, 0
+
 heightentry SPECIES_MEGA_VENUSAUR, 3, 3, 0, 0
 heightentry SPECIES_MEGA_CHARIZARD_X, 3, 3, 0, 0
 heightentry SPECIES_MEGA_CHARIZARD_Y, 3, 3, 0, 0

@@ -170,6 +170,7 @@
 //.halfword SPECIES_HERDIER
 //.halfword SPECIES_COPPERAJAH
 //.halfword SPECIES_APPLETUN
-
+.halfword SPECIES_CARIBOLT
+.halfword SPECIES_STRATAGEM
 
 .close

@@ -22610,6 +22610,48 @@ mondata SPECIES_PECHARUNT, "Pecharunt"
     mondexweight SPECIES_PECHARUNT, "0.7 lbs."
 
 
+mondata SPECIES_CARIBOLT, "Caribolt"
+    basestats 84, 106, 82, 106, 77, 80
+    types TYPE_GRASS, TYPE_ELECTRIC
+    catchrate 45
+    baseexp 0 // defined in baseexp.s
+    evyields 0, 1, 0, 2, 0, 0
+    items ITEM_NONE, ITEM_NONE
+    genderratio 31
+    eggcycles 20
+    basefriendship 50
+    growthrate GROWTH_MEDIUM_SLOW
+    egggroups EGG_GROUP_FIELD, EGG_GROUP_FIELD
+    abilities ABILITY_OVERGROW, ABILITY_NONE
+    runchance 0
+    colorflip BODY_COLOR_GREEN, 0
+    mondexentry SPECIES_CARIBOLT, "Rivals spar by launching prismatic\nblasts from their antlers. These\nshowy displays avoid injury."
+    mondexclassification SPECIES_CARIBOLT, "Railgun Pokémon"
+    mondexheight SPECIES_CARIBOLT, "8’02”"
+    mondexweight SPECIES_CARIBOLT, "308.6 lbs."
+
+
+mondata SPECIES_STRATAGEM, "Stratagem"
+    basestats 90, 60, 65, 130, 120, 70
+    types TYPE_ROCK, TYPE_ROCK
+    catchrate 45
+    baseexp 0 // defined in baseexp.s
+    evyields 0, 0, 0, 0, 3, 0
+    items ITEM_NONE, ITEM_NONE
+    genderratio 255
+    eggcycles 20
+    basefriendship 50
+    growthrate GROWTH_MEDIUM_FAST
+    egggroups EGG_GROUP_UNDISCOVERED, EGG_GROUP_UNDISCOVERED
+    abilities ABILITY_LEVITATE, ABILITY_TECHNICIAN
+    runchance 0
+    colorflip BODY_COLOR_BROWN, 0
+    mondexentry SPECIES_STRATAGEM, "The claws on STRATAGEM's limbs are\nrather brittle. It uses them as\na launching pad for its attacks."
+    mondexclassification SPECIES_STRATAGEM, "Meteor Gem Pokémon"
+    mondexheight SPECIES_STRATAGEM, "2’11”"
+    mondexweight SPECIES_STRATAGEM, "99.0 lbs."
+
+
 mondata SPECIES_MEGA_VENUSAUR, "-----"
     basestats 80,100,123,80,122,120
     types TYPE_GRASS, TYPE_POISON

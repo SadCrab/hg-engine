@@ -68,6 +68,7 @@
 //.halfword SPECIES_CARKOL
 //.halfword SPECIES_COALOSSAL
 //.halfword SPECIES_STONJOURNER
+.halfword SPECIES_STRATAGEM
 
 
 .close

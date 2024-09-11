@@ -703,5 +703,7 @@
 /* SPECIES_KELDEO          */ .word 0x0E
 /* SPECIES_MELOETTA        */ .word 0x06
 /* SPECIES_GENESECT        */ .word 0x0F
+/* SPECIES_CARIBOLT        */ .word 0x19
+/* SPECIES_STRATAGEM       */ .word 0x09
 
 .close

@@ -1028,6 +1028,8 @@
 .halfword SPECIES_IRON_CROWN
 .halfword SPECIES_TERAPAGOS
 .halfword SPECIES_PECHARUNT
+.halfword SPECIES_CARIBOLT
+.halfword SPECIES_STRATAGEM
 
 
 .close

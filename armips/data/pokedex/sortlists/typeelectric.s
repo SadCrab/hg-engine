@@ -61,6 +61,7 @@
 //.halfword SPECIES_DRACOZOLT
 //.halfword SPECIES_ARCTOZOLT
 //.halfword SPECIES_REGIELEKI
+.halfword SPECIES_CARIBOLT
 
 
 .close

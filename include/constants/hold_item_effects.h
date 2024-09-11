@@ -225,4 +225,7 @@
 #define HOLD_EFFECT_WELLSPRING_MASK                    218
 #define HOLD_EFFECT_HEARTHFLAME_MASK                   219
 
+//Custom Items
+#define HOLD_EFFECT_IMBALANCED_SCALES 186
+
 #endif

@@ -703,6 +703,8 @@
 /* SPECIES_KELDEO          */ .byte 0x00
 /* SPECIES_MELOETTA        */ .byte 0x00
 /* SPECIES_GENESECT        */ .byte 0x00
+/* SPECIES_CARIBOLT        */ .byte 0x00
+/* SPECIES_STRATAGEM       */ .byte 0x00
 
 
 .close

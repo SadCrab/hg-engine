@@ -26,23 +26,39 @@ static void UpdatePokemonData(struct SummaryState *summary, u8 mode)
     // Pokemon struct orders current HP before max HP, so need to handle mode == 0 as a special case
     if (mode == 0) {
         summary->pokemonData.hp = (u16) GetMonData(pokemon, MON_DATA_HP, NULL);
+
+        // Pokemon struct orders all data parameters as such:
+        // Attack -> Defense -> Speed -> SpAttack -> SpDefense
     } else {
         if (mode == 1) {
             paramStart = MON_DATA_HP_EV;
+            summary->pokemonData.hp        = (u16) GetMonData(pokemon, paramStart, NULL);
+            summary->pokemonData.attack    = (u16) GetMonData(pokemon, paramStart + 1, NULL);
+            summary->pokemonData.defense   = (u16) GetMonData(pokemon, paramStart + 2, NULL);
+            summary->pokemonData.speed     = (u16) GetMonData(pokemon, paramStart + 3, NULL);
+            summary->pokemonData.spAttack  = (u16) GetMonData(pokemon, paramStart + 4, NULL);
+            summary->pokemonData.spDefense = (u16) GetMonData(pokemon, paramStart + 5, NULL);
         } else {
-            paramStart = MON_DATA_HP_IV;
+            //// paramStart = MON_DATA_HP_IV;
+            paramStart = PERSONAL_BASE_HP;
+            summary->pokemonData.hp        = (u16) PokePersonalParaGet(GetMonData(pokemon, MON_DATA_SPECIES, NULL), paramStart);
+            summary->pokemonData.attack    = (u16) PokePersonalParaGet(GetMonData(pokemon, MON_DATA_SPECIES, NULL), paramStart + 1);
+            summary->pokemonData.defense   = (u16) PokePersonalParaGet(GetMonData(pokemon, MON_DATA_SPECIES, NULL), paramStart + 2);
+            summary->pokemonData.speed     = (u16) PokePersonalParaGet(GetMonData(pokemon, MON_DATA_SPECIES, NULL), paramStart + 3);
+            summary->pokemonData.spAttack  = (u16) PokePersonalParaGet(GetMonData(pokemon, MON_DATA_SPECIES, NULL), paramStart + 4);
+            summary->pokemonData.spDefense = (u16) PokePersonalParaGet(GetMonData(pokemon, MON_DATA_SPECIES, NULL), paramStart + 5);
         }
 
-        summary->pokemonData.hp = (u16) GetMonData(pokemon, paramStart, NULL);
+        //// summary->pokemonData.hp = (u16) GetMonData(pokemon, paramStart, NULL);
     }
 
-    // Pokemon struct orders all data parameters as such:
-    // Attack -> Defense -> Speed -> SpAttack -> SpDefense
-    summary->pokemonData.attack    = (u16) GetMonData(pokemon, paramStart + 1, NULL);
-    summary->pokemonData.defense   = (u16) GetMonData(pokemon, paramStart + 2, NULL);
-    summary->pokemonData.speed     = (u16) GetMonData(pokemon, paramStart + 3, NULL);
-    summary->pokemonData.spAttack  = (u16) GetMonData(pokemon, paramStart + 4, NULL);
-    summary->pokemonData.spDefense = (u16) GetMonData(pokemon, paramStart + 5, NULL);
+    //// Pokemon struct orders all data parameters as such:
+    //// Attack -> Defense -> Speed -> SpAttack -> SpDefense
+    //// summary->pokemonData.attack    = (u16) GetMonData(pokemon, paramStart + 1, NULL);
+    //// summary->pokemonData.defense   = (u16) GetMonData(pokemon, paramStart + 2, NULL);
+    //// summary->pokemonData.speed     = (u16) GetMonData(pokemon, paramStart + 3, NULL);
+    //// summary->pokemonData.spAttack  = (u16) GetMonData(pokemon, paramStart + 4, NULL);
+    //// summary->pokemonData.spDefense = (u16) GetMonData(pokemon, paramStart + 5, NULL);
 
 
     if (summary->baseData->dataType == 2) { // free it if it was allocated
@@ -62,6 +78,8 @@ static void UpdatePokemonData(struct SummaryState *summary, u8 mode)
 #define RED            (COLOR(5,  6, 0))
 #define PINK           (COLOR(7,  8, 0))
 #define GREEN          (COLOR(9, 10, 0))
+#define GOLD           (COLOR(12, 13, 0))
+#define GOLD_INVERT    (COLOR(13, 12, 0))
 #define WHITE          (COLOR(0xE, 0xF, 0))
 
 static s8 sNatureStatEffects[25][6] = {
@@ -128,7 +146,7 @@ void Summary_ColorizeStatScreen(struct SummaryState *summary, u32 mode)
             u32 color = WHITE;
             if (sNatureStatEffects[nature][i] > 0) {
                 msgId = 196-1; // Stat+
-                color = RED_INVERT;
+                color = RED;
             } else if (sNatureStatEffects[nature][i] < 0) {
                 msgId = 201-1; // Stat-
                 color = BLUE_INVERT;
@@ -140,8 +158,8 @@ void Summary_ColorizeStatScreen(struct SummaryState *summary, u32 mode)
             Summary_PrintStringGeneric(summary, 0xF, 110, WHITE, JUSTIFY_LEFT);
         } else if (mode == 1) { // ev's
             Summary_PrintStringGeneric(summary, 0xF, 206, WHITE, JUSTIFY_LEFT);
-        } else {                // iv's
-            Summary_PrintStringGeneric(summary, 0xF, 207, WHITE, JUSTIFY_LEFT);
+        } else {                // Base Stat (changed from IVs)
+            Summary_PrintStringGeneric(summary, 0xF, 208, WHITE, JUSTIFY_LEFT);
         }
         CopyWindowToVram(&summary->defnWindows[0xF+i]);
     }

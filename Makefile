@@ -45,8 +45,10 @@ endif
 
 default: all
 
-ROMNAME = rom.nds
-BUILDROM = test.nds
+# ROMNAME = rom.nds
+# BUILDROM = test.nds
+ROMNAME = rom_DSPRE_edits.nds
+BUILDROM = GodlyGold.nds
 
 ####################### Tools #######################
 ADPCMXQ := tools/adpcm-xq

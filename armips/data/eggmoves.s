@@ -3919,4 +3919,13 @@ eggmoveentry SPECIES_FRILLISH_FEMALE
 	eggmove MOVE_PAIN_SPLIT
 	eggmove MOVE_RECOVER
 
+eggmoveentry SPECIES_CARIBOLT
+	eggmove MOVE_DOUBLE_EDGE
+	eggmove MOVE_DOUBLE_KICK
+	eggmove MOVE_NATURAL_GIFT
+	eggmove MOVE_POWER_WHIP
+	eggmove MOVE_PRESENT
+	eggmove MOVE_RAPID_SPIN
+	// eggmove MOVE_SPOTLIGHT
+
 terminateeggmoves

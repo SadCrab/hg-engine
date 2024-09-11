@@ -1,0 +1,24 @@
+{
+	"files.associations": {
+		"global.h": "c",
+		"types.h": "c",
+		"io_reg.h": "c",
+		"species.h": "c",
+		"weather_numbers.h": "c",
+		"hold_item_effects.h": "c",
+		"item.h": "c",
+		"game.h": "c",
+		"file.h": "c",
+		"ability.h": "c",
+		"script.h": "c",
+		"pokemon.h": "c",
+		"moves.h": "c",
+		"summary.h": "c",
+		"config.h": "c",
+		"move_effects.h": "c",
+		"debug.h": "c",
+		"battle_script_constants.h": "c",
+		"battle.h": "c"
+	},
+	"C_Cpp.errorSquiggles": "disabled"
+}
